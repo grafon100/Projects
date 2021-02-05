@@ -1,0 +1,37 @@
+/**
+ *
+ * @author grafon100
+ */
+interface HlGit{
+    double HG(double a);
+    default void WelGit(){
+        System.out.println("Welcom to GIT! \n");
+    }
+}
+class Git implements HlGit{
+    String s;
+    int r;
+    Git(String s,int r ){
+        this.s = s;
+        this.r = r;
+    }
+    void PrinG(){
+        for(int i = 1; i <= r; i++){
+            System.out.println(i+ ") " + s);
+                    }
+    }
+    public double HG(double a){
+        System.out.println("\nThis Git " + a);
+        return a;
+    }
+}
+public class TestGit {
+    public static void main(String[] args) {
+        Git g = new Git("Hej Git! ", 5);
+        g.WelGit();
+        g.PrinG();
+        g.HG(12.0);
+    }
+    
+}
+
